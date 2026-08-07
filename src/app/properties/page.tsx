@@ -12,14 +12,30 @@ export default function PropertiesPage() {
   const [selectedLocation, setSelectedLocation] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const categories = ['All', 'Villas', 'Plots', 'Apartments', 'Commercial', 'Farm Lands'];
-  const locations = ['All', 'Muthanallur Cross', 'Sarjapur Road', 'Dommasandra', 'Attibele - Sarjapur Belt'];
+  const categories = ['All', 'Villas', 'Plots', 'Apartments', 'Commercial', 'Farm Lands', 'Lease House'];
+  const locations = [
+    'All', 
+    'Muthanallur Cross', 
+    'Sarjapur Road', 
+    'Dommasandra', 
+    'Attibele', 
+    'Chandapura', 
+    'Electronic City', 
+    'Whitefield', 
+    'Varthur', 
+    'Bellandur', 
+    'HSR Layout'
+  ];
 
   const filteredProperties = MOCK_PROPERTIES.filter(p => {
     const matchesCategory = selectedCategory === 'All' || p.category === selectedCategory;
-    const matchesLocation = selectedLocation === 'All' || p.location.includes(selectedLocation);
-    const matchesQuery = p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                         p.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesLocation = selectedLocation === 'All' || 
+                            p.location.toLowerCase().includes(selectedLocation.toLowerCase()) ||
+                            p.address.toLowerCase().includes(selectedLocation.toLowerCase());
+    const matchesQuery = searchQuery === '' || 
+                         p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         p.location.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesLocation && matchesQuery;
   });
 
