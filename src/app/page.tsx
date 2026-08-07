@@ -170,7 +170,7 @@ export default function HomePage() {
                     <div>
                       <h4 className="font-bold text-slate-900">Head Office Address</h4>
                       <p className="text-slate-600 text-xs mt-0.5">
-                        OM Sakthi Real Estate, Muthanallur Cross Junction, Sarjapur Main Road, Bengaluru, Karnataka - 562125
+                        OM Sakthi Real Estate, No.29, 3rd Main Road, Arasappa Layout, Muthanallur Cross, Bengaluru, Karnataka - 562125
                       </p>
                     </div>
                   </div>
@@ -180,8 +180,8 @@ export default function HomePage() {
                       <Phone className="w-5 h-5 text-[#D4AF37]" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900">Phone & WhatsApp Hotline</h4>
-                      <p className="text-slate-600 text-xs mt-0.5">+91 98450 12345 / +91 98450 67890</p>
+                      <h4 className="font-bold text-slate-900">Phone & WhatsApp Hotline (Ramesh)</h4>
+                      <p className="text-slate-600 text-xs mt-0.5">+91 88849 03668 / +91 80957 34812</p>
                     </div>
                   </div>
                 </div>
@@ -191,7 +191,7 @@ export default function HomePage() {
                     <span className="font-bold block">Need an Agent Pick-up?</span>
                     <span>Free doorstep pick & drop for genuine property buyers around Sarjapur.</span>
                   </div>
-                  <a href="tel:+919845012345" className="bg-[#0F4C81] text-white font-bold px-3 py-2 rounded-lg text-xs shrink-0">
+                  <a href="tel:+918884903668" className="bg-[#0F4C81] text-white font-bold px-3 py-2 rounded-lg text-xs shrink-0">
                     Call Now
                   </a>
                 </div>
@@ -314,9 +314,9 @@ export default function HomePage() {
           <div>
             <h4 className="font-bold text-white text-sm mb-4 uppercase tracking-wider">Headquarters</h4>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Muthanallur Cross Junction, Sarjapur Main Road, Bengaluru, KA 562125
+              No.29, 3rd Main Road, Arasappa Layout, Muthanallur Cross, Bengaluru, KA 562125
             </p>
-            <p className="mt-3 text-white font-extrabold text-sm">+91 98450 12345</p>
+            <p className="mt-3 text-white font-extrabold text-sm">Ramesh: +91 88849 03668 / 80957 34812</p>
           </div>
         </div>
 
