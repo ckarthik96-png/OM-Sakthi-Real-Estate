@@ -673,8 +673,8 @@ export const MOCK_LEADS: Lead[] = [
   {
     id: "lead-101",
     name: "Ramesh Kumar",
-    phone: "+91 98450 12345",
-    email: "ramesh.k@gmail.com",
+    phone: "+91 88849 03668",
+    email: "ramesh@omsakthirealestate.com",
     propertyInterest: "OM Sakthi Grandeur Ultra-Luxury Villas",
     budget: "₹ 1.5 Cr - ₹ 2.0 Cr",
     location: "Muthanallur Cross",
