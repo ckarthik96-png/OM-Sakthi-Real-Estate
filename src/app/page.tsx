@@ -5,7 +5,6 @@ import Navbar from '@/components/Navbar';
 import HeroSearch from '@/components/HeroSearch';
 import FeaturedProperties from '@/components/FeaturedProperties';
 import AiPropertyAssistant from '@/components/AiPropertyAssistant';
-import PanoramaViewer360 from '@/components/PanoramaViewer360';
 import Link from 'next/link';
 import { 
   Building2, ShieldCheck, Landmark, MapPin, CheckCircle2, 
@@ -76,24 +75,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
-            {/* Interactive 360 Degree Virtual Tour Section */}
-            <div className="pt-8 border-t border-slate-800">
-              <div className="text-center max-w-2xl mx-auto mb-8">
-                <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full">
-                  Immersive 3D Experience
-                </span>
-                <h3 className="text-2xl sm:text-4xl font-extrabold text-white mt-3">
-                  Interactive 360° Villa Virtual Tour
-                </h3>
-                <p className="text-xs text-slate-400 mt-2">
-                  Click and drag your cursor to pan across living room foyers, master bedroom suites, and sky balconies in 360 degrees.
-                </p>
-              </div>
-
-              <PanoramaViewer360 />
-            </div>
-
           </div>
         </section>
 
