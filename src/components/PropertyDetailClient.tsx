@@ -167,30 +167,50 @@ export default function PropertyDetailClient({ property }: { property: Property 
                   <h2 className="text-2xl font-extrabold text-slate-900 mt-1">About {property.title}</h2>
                 </div>
 
-                <div className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed font-light">
-                  <h4 className="font-extrabold text-slate-900 text-base uppercase tracking-wide text-[#0F4C81]">SCULPT A BRILLIANT FUTURE</h4>
-                  <p>
-                    Welcome to <strong>{property.title}</strong>, a brilliantly planned plotted and luxury residential development situated in Sarjapur's prime growth corridor near Muthanallur Cross. Discover a brighter, elevated life close to nature, top tech parks, and key expressways.
-                  </p>
+                <div className="space-y-5 text-xs sm:text-sm text-slate-700 leading-relaxed font-light">
+                  <div className="space-y-1">
+                    <h4 className="font-extrabold text-[#0F4C81] text-sm uppercase tracking-wide">SCULPT A BRILLIANT FUTURE</h4>
+                    <p>
+                      It’s time to unveil a future shimmering with promise, in which your lifestyle aspirations and investment goals come together in perfect harmony. Welcome to <strong>{property.title}</strong>, a brilliant planned plotted and luxury development, designed for those who know that tomorrow begins with the choices they make today. Discover a brighter, better life. A life close to nature, close to convenience, and closer still to the dreams you see in your own crystal ball.
+                    </p>
+                  </div>
 
-                  <h4 className="font-extrabold text-slate-900 text-base uppercase tracking-wide text-[#0F4C81] pt-2">SCRIPT EVERY FACET OF YOUR STORY</h4>
-                  <p>
-                    {property.description}
-                  </p>
+                  <div className="space-y-1">
+                    <h4 className="font-extrabold text-[#0F4C81] text-sm uppercase tracking-wide">LIVE IN A SPARKLING SETTING</h4>
+                    <p>
+                      Located in the fast-evolving Sarjapur growth corridor near Muthanallur Cross, close to NH44 / Hosur Expressway and just a short drive from key IT hubs, <strong>{property.title}</strong> places you at the heart of Bengaluru’s growth corridor where the future is taking shape. Premier international schools, colleges, tech parks, and leisure resorts emerge into view, signs of a vibrant tomorrow where every convenience is within your reach.
+                    </p>
+                  </div>
 
-                  <h4 className="font-extrabold text-slate-900 text-base uppercase tracking-wide text-[#0F4C81] pt-2">CARVE A LIFE OF MYRIAD POSSIBILITIES</h4>
-                  <p>
-                    Featuring {property.areaSqFt} sq.ft of thoughtfully designed layouts, luxury clubhouses, private garden enclaves, and 24/7 legal RERA verification.
-                  </p>
+                  <div className="space-y-1">
+                    <h4 className="font-extrabold text-[#0F4C81] text-sm uppercase tracking-wide">SCRIPT EVERY FACET OF YOUR STORY</h4>
+                    <p>
+                      Shape your home, design your lifestyle, script your story, exactly as you have always imagined it. Choose from thoughtfully laid out premium units in 60x40 sq.ft and 50x80 sq.ft configurations. Or, if your lifestyle demands more space, opt for one of a select number of larger custom plots. {property.title} opens the door to the future you have dreamed of, where you can live life as large as you want to.
+                    </p>
+                  </div>
+
+                  <div className="space-y-1">
+                    <h4 className="font-extrabold text-[#0F4C81] text-sm uppercase tracking-wide">CHISEL ON NATURE’S CRYSTAL</h4>
+                    <p>
+                      At the very heart of the development lies a massive central park, its refreshing, green soul. Look anywhere and nature smiles at you in the form of flowering gardens and vast lawns, social spaces, and shaded seating.
+                    </p>
+                  </div>
+
+                  <div className="space-y-1">
+                    <h4 className="font-extrabold text-[#0F4C81] text-sm uppercase tracking-wide">CARVE A LIFE OF MYRIAD POSSIBILITIES</h4>
+                    <p>
+                      At {property.title}, moments can linger and stretch as you relax in nature’s green embrace, or commune with your inner self on the yoga deck. Or life can pick up its pace and set the adrenaline flowing in the modern clubhouse with amenities such as pickleball, badminton, snooker, table tennis, a party hall, and more.
+                    </p>
+                  </div>
                 </div>
 
                 {property.reraId && (
                   <div className="mt-6 pt-4 border-t border-slate-100 text-xs text-slate-500 flex items-center justify-between">
                     <span className="flex items-center gap-2">
                       <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                      <strong>RERA Registration ID:</strong> {property.reraId}
+                      <strong>RERA Registration No:</strong> {property.reraId}
                     </span>
-                    <span className="text-emerald-700 font-bold bg-emerald-50 px-2.5 py-1 rounded">Clear Title Verified</span>
+                    <span className="text-emerald-700 font-bold bg-emerald-50 px-3 py-1 rounded-full">100% RERA Verified</span>
                   </div>
                 )}
               </section>
@@ -199,58 +219,79 @@ export default function PropertyDetailClient({ property }: { property: Property 
               <section id="plans" className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
                 <div className="border-b border-slate-200 pb-4">
                   <span className="text-xs font-bold text-[#0F4C81] uppercase tracking-wider">Architectural Blueprint</span>
-                  <h2 className="text-2xl font-extrabold text-slate-900 mt-1">Master Plan & Floor Layouts</h2>
+                  <h2 className="text-2xl font-extrabold text-slate-900 mt-1">Plans & Blueprint</h2>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Master Plan Card */}
-                  <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 group">
-                    <div className="relative h-48 rounded-xl overflow-hidden mb-3 bg-slate-900">
+                  <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 group">
+                    <div className="relative h-56 rounded-xl overflow-hidden mb-3 bg-slate-900">
                       <img 
                         src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" 
                         alt="Master Plan Blueprint" 
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-500"
                       />
-                      <span className="absolute top-3 left-3 bg-[#0F4C81] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">
-                        Master Layout Plan
+                      <span className="absolute top-3 left-3 bg-[#0F4C81] text-white text-[10px] font-extrabold px-2.5 py-1 rounded uppercase">
+                        Master Plan
                       </span>
                     </div>
                     <h4 className="font-bold text-slate-900 text-sm">Sanctioned Master Plan Blueprint</h4>
                     <p className="text-xs text-slate-500 mt-1">BMRDA approved layout with asphalt roads, parks & clubhouse area.</p>
                   </div>
 
-                  {/* Floor Plan Card */}
-                  <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 group">
-                    <div className="relative h-48 rounded-xl overflow-hidden mb-3 bg-slate-900">
+                  {/* Location Map Card */}
+                  <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 group">
+                    <div className="relative h-56 rounded-xl overflow-hidden mb-3 bg-slate-900">
                       <img 
                         src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
-                        alt="Floor Plan" 
+                        alt="Location Map" 
                         className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-500"
                       />
-                      <span className="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">
-                        Architectural Floor Plan
+                      <span className="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-extrabold px-2.5 py-1 rounded uppercase">
+                        Location Map
                       </span>
                     </div>
-                    <h4 className="font-bold text-slate-900 text-sm">Independent Unit Floor Plan</h4>
-                    <p className="text-xs text-slate-500 mt-1">Double height living room, private terrace & east facing entry.</p>
+                    <h4 className="font-bold text-slate-900 text-sm">Location Connectivity Blueprint</h4>
+                    <p className="text-xs text-slate-500 mt-1">Direct access to Sarjapur Main Road, NH44 & Metro Corridor.</p>
                   </div>
                 </div>
               </section>
 
-              {/* Section 3: Amenities Grid (Prestige Group Grid Style) */}
+              {/* Section 3: Amenities Grid (Prestige Crystal Lawns 20 Amenities) */}
               <section id="amenities" className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
                 <div className="border-b border-slate-200 pb-4">
-                  <span className="text-xs font-bold text-[#0F4C81] uppercase tracking-wider">Lifestyle Experience</span>
-                  <h2 className="text-2xl font-extrabold text-slate-900 mt-1">Project Amenities & Facilities</h2>
+                  <span className="text-xs font-bold text-[#0F4C81] uppercase tracking-wider">Lifestyle Amenities</span>
+                  <h2 className="text-2xl font-extrabold text-slate-900 mt-1">Amenities</h2>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  {property.amenities.map((amenity, i) => (
-                    <div key={i} className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center hover:border-[#0F4C81] transition group">
+                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4">
+                  {[
+                    'Pedestrian Pathway',
+                    'Water Feature & Bubbler Fountain',
+                    'Amphitheatre',
+                    'Yoga Lawn',
+                    'Camp Fire',
+                    'Sit Outs & Gazebos',
+                    'Discovery Garden',
+                    'Multipurpose Court',
+                    'Kids Playground',
+                    'Rock Climbing',
+                    'Senior Citizen Area',
+                    'Basketball Court',
+                    'Joggers Park',
+                    'Clubhouse',
+                    'Outdoor Gyms',
+                    'Reflexology Pathway',
+                    'Pet Park',
+                    'Yoga & Meditation Deck',
+                    'Orchard',
+                    'Miyawaki Greens'
+                  ].map((amenityName, i) => (
+                    <div key={i} className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center hover:border-[#0F4C81] hover:shadow-md transition group">
                       <div className="w-10 h-10 rounded-xl bg-[#0F4C81]/10 text-[#0F4C81] flex items-center justify-center mx-auto mb-2 group-hover:bg-[#0F4C81] group-hover:text-white transition">
                         <CheckCircle2 className="w-5 h-5" />
                       </div>
-                      <span className="font-bold text-xs text-slate-800">{amenity}</span>
+                      <span className="font-bold text-xs text-slate-800 block leading-tight">{amenityName}</span>
                     </div>
                   ))}
                 </div>
