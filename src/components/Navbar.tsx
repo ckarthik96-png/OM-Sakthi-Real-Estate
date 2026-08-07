@@ -29,9 +29,9 @@ export default function Navbar() {
               <Phone className="w-4 h-4 text-[#D4AF37]" />
               <span>+91 88849 03668 / 80957 34812</span>
             </a>
-            <a href="mailto:info@omsakthirealestate.com" className="hidden sm:flex items-center gap-2 hover:text-[#D4AF37] transition font-medium">
+            <a href="mailto:ramesh@omsakthirealestate.com" className="hidden sm:flex items-center gap-2 hover:text-[#D4AF37] transition font-medium">
               <Mail className="w-4 h-4 text-[#D4AF37]" />
-              <span>info@omsakthirealestate.com</span>
+              <span>ramesh@omsakthirealestate.com</span>
             </a>
           </div>
         </div>
