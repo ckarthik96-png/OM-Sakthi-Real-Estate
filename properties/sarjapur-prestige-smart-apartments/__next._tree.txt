@@ -1,4 +1,4 @@
-:HL["/OM-Sakthi-Real-Estate/_next/static/chunks/0u48b2mm6rth6.css","style"]
+:HL["/OM-Sakthi-Real-Estate/_next/static/chunks/0niqn1ecwehqq.css","style"]
 :HL["/OM-Sakthi-Real-Estate/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/OM-Sakthi-Real-Estate/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"properties","param":null,"prefetchHints":4192,"slots":{"children":{"name":"id","param":{"type":"d","key":"sarjapur-prestige-smart-apartments","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"SRkGaqXPLEaVFDbnQGn7f"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"properties","param":null,"prefetchHints":4192,"slots":{"children":{"name":"id","param":{"type":"d","key":"sarjapur-prestige-smart-apartments","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"yTOKLBy3niNK12ERmCTJ_"}
