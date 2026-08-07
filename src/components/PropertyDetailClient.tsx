@@ -302,86 +302,93 @@ export default function PropertyDetailClient({ property }: { property: Property 
                 </div>
               </section>
 
-              {/* Section 4: Gallery (Exact Prestige Crystal Lawns 7-Image Layout matching user screenshot) */}
+              {/* Section 4: Gallery (Cohesive High-Resolution Villa Project Photos matching building architecture) */}
               <section id="gallery" className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
                 <div className="border-b border-slate-200 pb-4">
                   <h2 className="text-3xl font-extrabold text-slate-800 tracking-tight">Gallery</h2>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
                     <img 
-                      src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" 
-                      alt="Grand Clubhouse Entry"
+                      src="/OM-Sakthi-Real-Estate/gallery_grand_clubhouse.jpg" 
+                      alt="Grand Clubhouse Exterior"
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_grand_clubhouse.jpg"; }}
                     />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                       Grand Clubhouse
                     </span>
                   </div>
 
-                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
                     <img 
-                      src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" 
+                      src="/OM-Sakthi-Real-Estate/gallery_shaded_gazebo.jpg" 
                       alt="Shaded Gazebo & Seating"
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_shaded_gazebo.jpg"; }}
                     />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                       Shaded Gazebo
                     </span>
                   </div>
 
-                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
                     <img 
-                      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
-                      alt="Grand Arch Boulevard Entrance"
+                      src="/OM-Sakthi-Real-Estate/gallery_entrance_archway.jpg" 
+                      alt="Grand Archway Entrance Boulevard"
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_entrance_archway.jpg"; }}
                     />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                       Entrance Archway
                     </span>
                   </div>
 
-                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
                     <img 
-                      src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" 
-                      alt="Central Water Fountain Plaza"
+                      src="/OM-Sakthi-Real-Estate/gallery_bubbler_fountain.jpg" 
+                      alt="Central Bubbler Fountain Plaza"
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_bubbler_fountain.jpg"; }}
                     />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                       Bubbler Fountain
                     </span>
                   </div>
 
-                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
                     <img 
-                      src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" 
-                      alt="Joggers Park & Fenced Courts"
+                      src="/OM-Sakthi-Real-Estate/gallery_sports_courts.jpg" 
+                      alt="Sports Courts Facility"
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_sports_courts.jpg"; }}
                     />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                       Sports Courts
                     </span>
                   </div>
 
-                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
                     <img 
-                      src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" 
-                      alt="Aerial Master Layout View"
+                      src="/OM-Sakthi-Real-Estate/gallery_aerial_master_view.jpg" 
+                      alt="Aerial Master Township View"
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_aerial_master_view.jpg"; }}
                     />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                       Aerial Master View
                     </span>
                   </div>
 
-                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group sm:col-span-2 lg:col-span-2">
+                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900 sm:col-span-2 lg:col-span-2">
                     <img 
-                      src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80" 
+                      src="/OM-Sakthi-Real-Estate/gallery_miyawaki_greens.jpg" 
                       alt="Miyawaki Greens & Children Play Lawn"
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_miyawaki_greens.jpg"; }}
                     />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                       Miyawaki Greens & Play Lawn
                     </span>
                   </div>
