@@ -257,43 +257,126 @@ export default function PropertyDetailClient({ property }: { property: Property 
                 </div>
               </section>
 
-              {/* Section 3: Amenities Grid (Prestige Crystal Lawns 20 Amenities) */}
+              {/* Section 3: Amenities Grid (Exact Prestige Line-Art Icon Grid Style) */}
               <section id="amenities" className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
                 <div className="border-b border-slate-200 pb-4">
-                  <span className="text-xs font-bold text-[#0F4C81] uppercase tracking-wider">Lifestyle Amenities</span>
-                  <h2 className="text-2xl font-extrabold text-slate-900 mt-1">Amenities</h2>
+                  <h2 className="text-3xl font-extrabold text-slate-800 tracking-tight">Amenities</h2>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 border-t border-l border-slate-200 rounded-2xl overflow-hidden bg-white">
                   {[
-                    'Pedestrian Pathway',
-                    'Water Feature & Bubbler Fountain',
-                    'Amphitheatre',
-                    'Yoga Lawn',
-                    'Camp Fire',
-                    'Sit Outs & Gazebos',
-                    'Discovery Garden',
-                    'Multipurpose Court',
-                    'Kids Playground',
-                    'Rock Climbing',
-                    'Senior Citizen Area',
-                    'Basketball Court',
-                    'Joggers Park',
-                    'Clubhouse',
-                    'Outdoor Gyms',
-                    'Reflexology Pathway',
-                    'Pet Park',
-                    'Yoga & Meditation Deck',
-                    'Orchard',
-                    'Miyawaki Greens'
-                  ].map((amenityName, i) => (
-                    <div key={i} className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center hover:border-[#0F4C81] hover:shadow-md transition group">
-                      <div className="w-10 h-10 rounded-xl bg-[#0F4C81]/10 text-[#0F4C81] flex items-center justify-center mx-auto mb-2 group-hover:bg-[#0F4C81] group-hover:text-white transition">
-                        <CheckCircle2 className="w-5 h-5" />
-                      </div>
-                      <span className="font-bold text-xs text-slate-800 block leading-tight">{amenityName}</span>
+                    { name: 'Pedestrian Pathway', icon: '🚶‍♂️' },
+                    { name: 'Water Feature and Bubbler Fountain', icon: '⛲' },
+                    { name: 'Amphitheatre', icon: '🏛️' },
+                    { name: 'Yoga Lawn', icon: '🧘‍♀️' },
+                    { name: 'Camp Fire', icon: '🔥' },
+                    { name: 'Sit Outs & Gazebos', icon: '⛩️' },
+                    { name: 'Discovery Garden', icon: '🦋' },
+                    { name: 'Multipurpose Court', icon: '🏸' },
+                    { name: 'Kids Playground', icon: '🛝' },
+                    { name: 'Rock Climbing', icon: '🧗‍♂️' },
+                    { name: 'Senior Citizen Area', icon: '👴' },
+                    { name: 'Basketball Court', icon: '🏀' },
+                    { name: 'Joggers Park', icon: '🏃‍♂️' },
+                    { name: 'Clubhouse', icon: '🏢' },
+                    { name: 'Outdoor Gyms', icon: '🏋️‍♂️' },
+                    { name: 'Reflexology Pathway', icon: '👣' },
+                    { name: 'Pet Park', icon: '🐕' },
+                    { name: 'Yoga and Meditation Deck', icon: '🧘‍♂️' },
+                    { name: 'Orchard', icon: '🌳' },
+                    { name: 'Miyawaki Greens', icon: '🌿' }
+                  ].map((amenity, i) => (
+                    <div key={i} className="p-6 border-r border-b border-slate-200 text-center flex flex-col items-center justify-center min-h-[140px] hover:bg-slate-50 transition group">
+                      <span className="text-3xl mb-3 group-hover:scale-110 transition duration-300">{amenity.icon}</span>
+                      <span className="font-semibold text-xs text-slate-700 leading-tight text-center max-w-[140px]">{amenity.name}</span>
                     </div>
                   ))}
+                </div>
+              </section>
+
+              {/* Section 4: Gallery (Exact Prestige Crystal Lawns 7-Image Layout matching user screenshot) */}
+              <section id="gallery" className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                <div className="border-b border-slate-200 pb-4">
+                  <h2 className="text-3xl font-extrabold text-slate-800 tracking-tight">Gallery</h2>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" 
+                      alt="Grand Clubhouse Entry"
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    />
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                      Grand Clubhouse
+                    </span>
+                  </div>
+
+                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" 
+                      alt="Shaded Gazebo & Seating"
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    />
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                      Shaded Gazebo
+                    </span>
+                  </div>
+
+                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+                      alt="Grand Arch Boulevard Entrance"
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    />
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                      Entrance Archway
+                    </span>
+                  </div>
+
+                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" 
+                      alt="Central Water Fountain Plaza"
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    />
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                      Bubbler Fountain
+                    </span>
+                  </div>
+
+                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" 
+                      alt="Joggers Park & Fenced Courts"
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    />
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                      Sports Courts
+                    </span>
+                  </div>
+
+                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" 
+                      alt="Aerial Master Layout View"
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    />
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                      Aerial Master View
+                    </span>
+                  </div>
+
+                  <div className="relative h-56 rounded-2xl overflow-hidden shadow-sm group sm:col-span-2 lg:col-span-2">
+                    <img 
+                      src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80" 
+                      alt="Miyawaki Greens & Children Play Lawn"
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    />
+                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs">
+                      Miyawaki Greens & Play Lawn
+                    </span>
+                  </div>
                 </div>
               </section>
 
