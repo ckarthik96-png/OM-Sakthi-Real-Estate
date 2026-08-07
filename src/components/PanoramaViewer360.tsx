@@ -96,14 +96,14 @@ export default function PanoramaViewer360({
       animationFrameId = requestAnimationFrame(animate);
 
       if (!isUserInteracting.current) {
-        // Slow auto rotation oscillation between -80 and +80 degrees
-        lon.current += 0.1 * (isUserInteracting.current ? 0 : 1);
-        if (lon.current > 85) lon.current = -85;
+        // Slow auto rotation oscillation between -40 and +40 degrees for 90° focal sweep
+        lon.current += 0.08 * (isUserInteracting.current ? 0 : 1);
+        if (lon.current > 42) lon.current = -42;
       }
 
-      // Clamp horizontal angle to 180° sweep (-90° to +90°) and vertical angle (-60° to +60°)
-      lon.current = Math.max(-90, Math.min(90, lon.current));
-      lat.current = Math.max(-60, Math.min(60, lat.current));
+      // Clamp horizontal angle to 90° sweep (-45° to +45°) and vertical angle (-35° to +35°)
+      lon.current = Math.max(-45, Math.min(45, lon.current));
+      lat.current = Math.max(-35, Math.min(35, lat.current));
       const phi = THREE.MathUtils.degToRad(90 - lat.current);
       const theta = THREE.MathUtils.degToRad(lon.current);
 
@@ -207,9 +207,9 @@ export default function PanoramaViewer360({
           </div>
           <div>
             <h4 className="font-extrabold text-sm flex items-center gap-1.5">
-              WebGL 3D Full-House 180° Panoramic Tour <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+              WebGL 3D Full-House 90° Focal Panoramic Tour <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             </h4>
-            <p className="text-[11px] text-slate-400">Click & Drag to rotate 180° across front, interior living room & back balcony</p>
+            <p className="text-[11px] text-slate-400">Click & Drag for ultra-focused 90° high-precision interior panorama sweep</p>
           </div>
         </div>
 
@@ -219,19 +219,19 @@ export default function PanoramaViewer360({
             onClick={() => handleRoomChange('living')}
             className={`px-3 py-1 rounded-lg transition ${activeRoom === 'living' ? 'bg-[#0F4C81] text-white shadow-xs' : 'text-slate-400 hover:text-white'}`}
           >
-            Front Living Room
+            Front Foyer (90°)
           </button>
           <button
             onClick={() => handleRoomChange('master')}
             className={`px-3 py-1 rounded-lg transition ${activeRoom === 'master' ? 'bg-[#0F4C81] text-white shadow-xs' : 'text-slate-400 hover:text-white'}`}
           >
-            Master Suite
+            Master Suite (90°)
           </button>
           <button
             onClick={() => handleRoomChange('balcony')}
             className={`px-3 py-1 rounded-lg transition ${activeRoom === 'balcony' ? 'bg-[#0F4C81] text-white shadow-xs' : 'text-slate-400 hover:text-white'}`}
           >
-            Back Side Balcony
+            Back Balcony (90°)
           </button>
         </div>
       </div>
@@ -247,14 +247,14 @@ export default function PanoramaViewer360({
         {!isLoaded && (
           <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm flex flex-col items-center justify-center text-white z-10">
             <RotateCw className="w-8 h-8 text-[#D4AF37] animate-spin mb-2" />
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-300">Rendering WebGL 3D 180° Environment...</span>
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-300">Rendering WebGL 3D 90° Environment...</span>
           </div>
         )}
 
         {/* Instruction Badge */}
         <div className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 text-[#D4AF37] text-xs font-bold flex items-center gap-2 pointer-events-none z-10">
           <Move className="w-4 h-4 animate-bounce" />
-          <span>180° Full House Rotation — Drag Mouse / Touch</span>
+          <span>90° Focused Full House Sweep — Drag Mouse / Touch</span>
         </div>
 
         {/* Zoom & Compass Controls Overlay */}
