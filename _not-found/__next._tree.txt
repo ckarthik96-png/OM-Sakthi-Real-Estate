@@ -1,2 +1,2 @@
-:HL["/OM-Sakthi-Real-Estate/_next/static/chunks/0k5pzphy_o9z7.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"E3ctjstpr7xUgv8vkBu3b"}
+:HL["/OM-Sakthi-Real-Estate/_next/static/chunks/3_0teggdk_d_l.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"U8enqa9hA03vX7mrMK1bC"}
