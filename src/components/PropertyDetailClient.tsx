@@ -215,7 +215,7 @@ export default function PropertyDetailClient({ property }: { property: Property 
                 )}
               </section>
 
-              {/* Section 2: Plans & Blueprint (Prestige Style Cards) */}
+              {/* Section 2: Plans & Blueprint (Authentic Technical CAD & Connectivity Blueprints) */}
               <section id="plans" className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
                 <div className="border-b border-slate-200 pb-4">
                   <span className="text-xs font-bold text-[#0F4C81] uppercase tracking-wider">Architectural Blueprint</span>
@@ -223,15 +223,19 @@ export default function PropertyDetailClient({ property }: { property: Property 
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {/* Master Plan Card */}
+                  {/* Master Plan Blueprint Card */}
                   <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 group">
-                    <div className="relative h-56 rounded-xl overflow-hidden mb-3 bg-slate-900">
+                    <div className="relative h-64 rounded-xl overflow-hidden mb-3 bg-slate-900 border border-slate-200 shadow-sm">
                       <img 
-                        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" 
-                        alt="Master Plan Blueprint" 
-                        className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-500"
+                        src="/OM-Sakthi-Real-Estate/master_plan_blueprint.jpg" 
+                        alt="Sanctioned Master Plan Blueprint CAD Layout" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        onError={(e) => {
+                          // Fallback for local preview if basepath differs
+                          (e.target as HTMLImageElement).src = "/master_plan_blueprint.jpg";
+                        }}
                       />
-                      <span className="absolute top-3 left-3 bg-[#0F4C81] text-white text-[10px] font-extrabold px-2.5 py-1 rounded uppercase">
+                      <span className="absolute top-3 left-3 bg-[#0F4C81] text-white text-[10px] font-extrabold px-2.5 py-1 rounded uppercase shadow-sm">
                         Master Plan
                       </span>
                     </div>
@@ -239,15 +243,19 @@ export default function PropertyDetailClient({ property }: { property: Property 
                     <p className="text-xs text-slate-500 mt-1">BMRDA approved layout with asphalt roads, parks & clubhouse area.</p>
                   </div>
 
-                  {/* Location Map Card */}
+                  {/* Location Connectivity Blueprint Card */}
                   <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 group">
-                    <div className="relative h-56 rounded-xl overflow-hidden mb-3 bg-slate-900">
+                    <div className="relative h-64 rounded-xl overflow-hidden mb-3 bg-slate-900 border border-slate-200 shadow-sm">
                       <img 
-                        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
-                        alt="Location Map" 
-                        className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-500"
+                        src="/OM-Sakthi-Real-Estate/location_map_blueprint.jpg" 
+                        alt="Location Connectivity GIS Map Blueprint" 
+                        className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        onError={(e) => {
+                          // Fallback for local preview if basepath differs
+                          (e.target as HTMLImageElement).src = "/location_map_blueprint.jpg";
+                        }}
                       />
-                      <span className="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-extrabold px-2.5 py-1 rounded uppercase">
+                      <span className="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-extrabold px-2.5 py-1 rounded uppercase shadow-sm">
                         Location Map
                       </span>
                     </div>
