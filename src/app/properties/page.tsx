@@ -1,16 +1,36 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import React, { useState, useEffect, Suspense } from 'react';
 import Navbar from '@/components/Navbar';
 import AiPropertyAssistant from '@/components/AiPropertyAssistant';
 import Link from 'next/link';
 import { MOCK_PROPERTIES } from '@/data/mockData';
 import { Search, MapPin, Maximize, Bed, Tag, Filter } from 'lucide-react';
 
-export default function PropertiesPage() {
+function PropertiesContent() {
+  const searchParams = useSearchParams();
+  const typeParam = searchParams.get('type');
+  
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedLocation, setSelectedLocation] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
+
+  useEffect(() => {
+    if (typeParam) {
+      if (typeParam.toLowerCase().includes('villa')) {
+        setSelectedCategory('Villas');
+      } else if (typeParam.toLowerCase().includes('plot') || typeParam.toLowerCase().includes('land')) {
+        setSelectedCategory('Plots');
+      } else if (typeParam.toLowerCase().includes('apartment')) {
+        setSelectedCategory('Apartments');
+      } else if (typeParam.toLowerCase().includes('lease')) {
+        setSelectedCategory('Lease House');
+      } else if (typeParam.toLowerCase().includes('commercial')) {
+        setSelectedCategory('Commercial');
+      }
+    }
+  }, [typeParam]);
 
   const categories = ['All', 'Villas', 'Plots', 'Apartments', 'Commercial', 'Farm Lands', 'Lease House'];
   const locations = [
@@ -202,5 +222,13 @@ export default function PropertiesPage() {
 
       <AiPropertyAssistant />
     </div>
+  );
+}
+
+export default function PropertiesPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-50 flex items-center justify-center text-xs font-bold text-slate-500">Loading catalog...</div>}>
+      <PropertiesContent />
+    </Suspense>
   );
 }
