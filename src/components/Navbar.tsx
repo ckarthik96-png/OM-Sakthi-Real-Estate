@@ -171,6 +171,25 @@ export default function Navbar() {
           </Link>
         </div>
       )}
+
+      {/* Floating Official WhatsApp Direct Chat Button (Fixed Bottom Left) */}
+      <a
+        href="https://wa.me/918884903668?text=Hi%20Ramesh%20(OM%20Sakthi%20Real%20Estate),%20I%20want%20property%20details%20and%20brochure."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 left-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl hover:scale-110 transition duration-300 flex items-center gap-2.5 border-2 border-white/80 group"
+        title="Chat with Ramesh on WhatsApp (+91 88849 03668)"
+      >
+        <img 
+          src="/OM-Sakthi-Real-Estate/whatsapp_icon.png" 
+          alt="WhatsApp Logo" 
+          className="w-7 h-7 object-contain group-hover:rotate-12 transition duration-300"
+          onError={(e) => { (e.target as HTMLImageElement).src = "/whatsapp_icon.png"; }}
+        />
+        <span className="hidden sm:inline font-black text-xs uppercase tracking-wider text-white">
+          WhatsApp Ramesh
+        </span>
+      </a>
     </header>
   );
 }
