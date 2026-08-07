@@ -18,15 +18,23 @@ export default function HeroSearch() {
 
   return (
     <div className="relative min-h-[640px] bg-[#0F172A] flex items-center justify-center overflow-hidden">
-      {/* Autoplay Full-Screen Background Video Banner Mockup */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" 
-          alt="Cinematic Sarjapur Real Estate"
-          className="w-full h-full object-cover opacity-35 scale-105 transition-transform duration-10000"
-        />
+      {/* DLF-Style Full-Screen Autoplay Background Video */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
+          className="w-full h-full object-cover opacity-40 scale-105"
+        >
+          <source 
+            src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-buildings-and-skyscrapers-41551-large.mp4" 
+            type="video/mp4" 
+          />
+        </video>
         {/* Dark Cinematic Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/75 to-[#0F172A]/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/70 to-[#0F172A]/40" />
       </div>
 
       {/* Content Container */}
