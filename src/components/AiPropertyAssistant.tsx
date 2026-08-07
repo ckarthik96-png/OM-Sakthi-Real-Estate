@@ -45,7 +45,7 @@ export default function AiPropertyAssistant() {
       return {
         sender: 'ai',
         text: `🏢 **OM Sakthi Head Office HQ**:\n\nNo.29, 3rd Main Road, Arasappa Layout, Muthanallur Cross Junction, Sarjapur Main Road, Bengaluru, Karnataka - 562125.\n\n📍 Landmark: Opposite Muthanallur Circle, Sarjapur Road.`,
-        link: { url: 'https://ckarthik96-png.github.io/OM-Sakthi-Real-Estate/#contact', label: 'Book Doorstep Pick-up & Site Visit' }
+        link: { url: '/#contact', label: 'Book Doorstep Pick-up & Site Visit' }
       };
     }
 
@@ -55,7 +55,7 @@ export default function AiPropertyAssistant() {
       return {
         sender: 'ai',
         text: `🏠 **Refundable Lease House Scheme**:\n\nWe offer registered 3-year lease homes with **100% refundable deposit** and ZERO monthly rent burden!\n\nFeatured Listing: **${leaseHouse?.title}** (${leaseHouse?.location})\nPrice Deposit: **${leaseHouse?.price}**`,
-        link: { url: `/OM-Sakthi-Real-Estate/properties/${leaseHouse?.id}`, label: 'View Lease Villa Details' },
+        link: { url: `/properties/${leaseHouse?.id}`, label: 'View Lease Villa Details' },
         propertyCard: leaseHouse
       };
     }
@@ -66,7 +66,7 @@ export default function AiPropertyAssistant() {
       return {
         sender: 'ai',
         text: `🏡 **Luxury Gated Community Villas**:\n\nWe have premium 3 BHK & 4 BHK villas featuring private gardens, swimming pools, clubhouse, and 24/7 security near Muthanallur Cross & Sarjapur.\n\nTop Pick: **${villa?.title}**\nPrice: **${villa?.price}** (${villa?.areaSqFt} sq.ft)`,
-        link: { url: `/OM-Sakthi-Real-Estate/properties/${villa?.id}`, label: 'Explore Villa Project' },
+        link: { url: `/properties/${villa?.id}`, label: 'Explore Villa Project' },
         propertyCard: villa
       };
     }
@@ -77,7 +77,7 @@ export default function AiPropertyAssistant() {
       return {
         sender: 'ai',
         text: `📐 **BMRDA Approved Residential Plots**:\n\nWe feature 30x40, 30x50 & 40x60 sites with 100% clear titles, asphalt roads, underground water/drainage, and instant bank loan clearance.\n\nFeatured Site: **${plot?.title}**\nPrice: **${plot?.price}**`,
-        link: { url: `/OM-Sakthi-Real-Estate/properties/${plot?.id}`, label: 'View Plot Blueprint & Layout' },
+        link: { url: `/properties/${plot?.id}`, label: 'View Plot Blueprint & Layout' },
         propertyCard: plot
       };
     }
@@ -88,7 +88,7 @@ export default function AiPropertyAssistant() {
       return {
         sender: 'ai',
         text: `🏢 **Smart High-Rise Apartments**:\n\nExplore 2 & 3 BHK luxury apartments with 30+ lifestyle amenities, rooftop pools, and lake views in Dommasandra & Sarjapur.\n\nFeatured Project: **${apt?.title}**\nPrice: **${apt?.price}**`,
-        link: { url: `/OM-Sakthi-Real-Estate/properties/${apt?.id}`, label: 'View Apartment Blueprint' },
+        link: { url: `/properties/${apt?.id}`, label: 'View Apartment Blueprint' },
         propertyCard: apt
       };
     }
@@ -99,7 +99,7 @@ export default function AiPropertyAssistant() {
       return {
         sender: 'ai',
         text: `🏢 **Main Road Commercial Real Estate**:\n\nHigh footfall retail showrooms and plug-and-play IT office floors facing main junction corridors.\n\nFeatured Property: **${comm?.title}**\nPrice: **${comm?.price}**`,
-        link: { url: `/OM-Sakthi-Real-Estate/properties/${comm?.id}`, label: 'View Commercial Space' },
+        link: { url: `/properties/${comm?.id}`, label: 'View Commercial Space' },
         propertyCard: comm
       };
     }
@@ -110,7 +110,7 @@ export default function AiPropertyAssistant() {
       return {
         sender: 'ai',
         text: `📍 **Properties in ${matchedLoc.name}**:\n\n${matchedLoc.overview}\n\nAvg. Price: **${matchedLoc.avgPricePerSqFt}**\nWe have 6 verified projects listed in ${matchedLoc.name}.`,
-        link: { url: `/OM-Sakthi-Real-Estate/locations/${matchedLoc.slug}`, label: `Browse 6 Projects in ${matchedLoc.name}` }
+        link: { url: `/locations/${matchedLoc.slug}`, label: `Browse 6 Projects in ${matchedLoc.name}` }
       };
     }
 
