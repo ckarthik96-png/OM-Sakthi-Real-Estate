@@ -33,6 +33,8 @@ export interface Property {
   builder: string;
   reraId?: string;
   address: string;
+  masterPlanImage?: string;
+  locationMapImage?: string;
   nearbySchools: string[];
   nearbyHospitals: string[];
 }

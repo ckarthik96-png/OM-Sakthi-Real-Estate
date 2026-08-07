@@ -116,8 +116,8 @@ export default function PropertyDetailClient({ property }: { property: Property 
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+919845012345" className="text-slate-800 font-bold text-xs flex items-center gap-1.5">
-              <Phone className="w-4 h-4 text-[#D4AF37]" /> +91 98450 12345
+            <a href="tel:+918884903668" className="text-slate-800 font-bold text-xs flex items-center gap-1.5">
+              <Phone className="w-4 h-4 text-[#D4AF37]" /> Ramesh: +91 88849 03668 / 80957 34812
             </a>
             <a href="#lead-form" className="gold-gradient-button px-4 py-2 rounded-xl text-xs uppercase tracking-wider font-extrabold shadow-md">
               Enquire Now
@@ -242,48 +242,48 @@ export default function PropertyDetailClient({ property }: { property: Property 
               <section id="plans" className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
                 <div className="border-b border-slate-200 pb-4">
                   <span className="text-xs font-bold text-[#0F4C81] uppercase tracking-wider">Architectural Blueprint</span>
-                  <h2 className="text-2xl font-extrabold text-slate-900 mt-1">Plans & Blueprint</h2>
+                  <h2 className="text-2xl font-extrabold text-slate-900 mt-1">Plans & Blueprint ({property.category})</h2>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {/* Master Plan Blueprint Card */}
+                  {/* Master Plan / Floor Plan Blueprint Card */}
                   <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 group">
                     <div className="relative h-64 rounded-xl overflow-hidden mb-3 bg-slate-900 border border-slate-200 shadow-sm">
                       <img 
-                        src="/OM-Sakthi-Real-Estate/master_plan_blueprint.jpg" 
-                        alt="Sanctioned Master Plan Blueprint CAD Layout" 
+                        src={property.masterPlanImage || "/OM-Sakthi-Real-Estate/master_plan_blueprint.jpg"} 
+                        alt={`${property.title} Sanctioned Blueprint Plan`} 
                         className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                         onError={(e) => {
-                          // Fallback for local preview if basepath differs
                           (e.target as HTMLImageElement).src = "/master_plan_blueprint.jpg";
                         }}
                       />
                       <span className="absolute top-3 left-3 bg-[#0F4C81] text-white text-[10px] font-extrabold px-2.5 py-1 rounded uppercase shadow-sm">
-                        Master Plan
+                        {property.category === 'Apartments' ? 'Floor Plan' : 'Master Plan'}
                       </span>
                     </div>
-                    <h4 className="font-bold text-slate-900 text-sm">Sanctioned Master Plan Blueprint</h4>
-                    <p className="text-xs text-slate-500 mt-1">BMRDA approved layout with asphalt roads, parks & clubhouse area.</p>
+                    <h4 className="font-bold text-slate-900 text-sm">
+                      {property.category === 'Apartments' ? '3 BHK Architectural Floor Plan' : 'Sanctioned Master Layout Plan'}
+                    </h4>
+                    <p className="text-xs text-slate-500 mt-1">BMRDA / RERA approved legal blueprint with precise dimensions for {property.title}.</p>
                   </div>
 
                   {/* Location Connectivity Blueprint Card */}
                   <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 group">
                     <div className="relative h-64 rounded-xl overflow-hidden mb-3 bg-slate-900 border border-slate-200 shadow-sm">
                       <img 
-                        src="/OM-Sakthi-Real-Estate/location_map_blueprint.jpg" 
-                        alt="Location Connectivity GIS Map Blueprint" 
+                        src={property.locationMapImage || "/OM-Sakthi-Real-Estate/location_map_blueprint.jpg"} 
+                        alt={`${property.title} Connectivity GIS Blueprint`} 
                         className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                         onError={(e) => {
-                          // Fallback for local preview if basepath differs
                           (e.target as HTMLImageElement).src = "/location_map_blueprint.jpg";
                         }}
                       />
                       <span className="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-extrabold px-2.5 py-1 rounded uppercase shadow-sm">
-                        Location Map
+                        GIS Location Map
                       </span>
                     </div>
-                    <h4 className="font-bold text-slate-900 text-sm">Location Connectivity Blueprint</h4>
-                    <p className="text-xs text-slate-500 mt-1">Direct access to Sarjapur Main Road, NH44 & Metro Corridor.</p>
+                    <h4 className="font-bold text-slate-900 text-sm">{property.location} Connectivity Blueprint</h4>
+                    <p className="text-xs text-slate-500 mt-1">Direct access to Sarjapur Main Road, NH44, Metro Corridor & Tech Parks.</p>
                   </div>
                 </div>
               </section>

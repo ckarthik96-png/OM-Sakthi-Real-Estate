@@ -165,10 +165,10 @@ export default function LocationDetailClient({ location }: LocationClientProps) 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
           <div>
             <div className="font-extrabold text-white text-base">OM SAKTHI REAL ESTATE • {location.name.toUpperCase()}</div>
-            <p className="text-slate-500 text-xs mt-1">Muthanallur Cross Junction, Sarjapur Main Road, Bengaluru - 562125</p>
+            <p className="text-slate-500 text-xs mt-1">No.29, 3rd Main Road, Arasappa Layout, Muthanallur Cross, Bengaluru - 562125</p>
           </div>
-          <a href="tel:+919845012345" className="text-white font-bold flex items-center gap-2 bg-[#0F4C81] px-4 py-2 rounded-xl">
-            <Phone className="w-4 h-4 text-[#D4AF37]" /> +91 98450 12345
+          <a href="tel:+918884903668" className="text-white font-bold flex items-center gap-2 bg-[#0F4C81] px-4 py-2 rounded-xl">
+            <Phone className="w-4 h-4 text-[#D4AF37]" /> Ramesh: +91 88849 03668 / 80957 34812
           </a>
         </div>
       </footer>

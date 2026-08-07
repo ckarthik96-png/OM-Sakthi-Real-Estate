@@ -15,19 +15,19 @@ export default function Navbar() {
           <div className="flex items-center gap-5 flex-wrap">
             <span className="flex items-center gap-2 font-medium">
               <MapPin className="w-4 h-4 text-[#D4AF37]" />
-              HQ: Muthanallur Cross, Sarjapur Road, Bengaluru
+              HQ: No.29, 3rd Main Road, Arasappa Layout, Muthanallur Cross, Bengaluru - 562125
             </span>
             <span className="hidden md:inline text-white/30">|</span>
             <span className="hidden md:flex items-center gap-2 text-slate-200">
               <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
-              RERA Verified Real Estate Partner
+              RERA Verified Partner • Ramesh
             </span>
           </div>
 
           <div className="flex items-center gap-6 text-xs sm:text-sm">
-            <a href="tel:+919845012345" className="flex items-center gap-2 hover:text-[#D4AF37] transition font-bold">
+            <a href="tel:+918884903668" className="flex items-center gap-2 hover:text-[#D4AF37] transition font-bold">
               <Phone className="w-4 h-4 text-[#D4AF37]" />
-              <span>+91 98450 12345</span>
+              <span>+91 88849 03668 / 80957 34812</span>
             </a>
             <a href="mailto:info@omsakthirealestate.com" className="hidden sm:flex items-center gap-2 hover:text-[#D4AF37] transition font-medium">
               <Mail className="w-4 h-4 text-[#D4AF37]" />
