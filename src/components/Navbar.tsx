@@ -60,8 +60,8 @@ export default function Navbar() {
           <Link href="/properties" className="hover:text-[#0F4C81] transition py-1 border-b-2 border-transparent hover:border-[#0F4C81]">
             Properties
           </Link>
-          <Link href="/#services" className="hover:text-[#0F4C81] transition py-1 border-b-2 border-transparent hover:border-[#0F4C81]">
-            Services
+          <Link href="/services" className="hover:text-[#0F4C81] transition py-1 border-b-2 border-transparent hover:border-[#0F4C81]">
+            Services & Guidance
           </Link>
           <Link href="/#locations" className="hover:text-[#0F4C81] transition py-1 border-b-2 border-transparent hover:border-[#0F4C81]">
             Popular Locations

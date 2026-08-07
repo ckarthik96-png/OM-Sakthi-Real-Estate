@@ -61,7 +61,7 @@ export default function HeroSearch() {
               onClick={() => setActiveTab('rent')}
               className={`px-4 py-2 rounded-lg transition ${activeTab === 'rent' ? 'bg-[#0F4C81] text-white shadow-xs' : 'text-slate-600 hover:bg-slate-100'}`}
             >
-              Rent Property
+              Rent / Lease House
             </button>
             <button
               onClick={() => setActiveTab('plots')}
@@ -107,6 +107,7 @@ export default function HeroSearch() {
                 <option value="Villas">Villas</option>
                 <option value="Apartments">Apartments</option>
                 <option value="Plots">Residential Plots</option>
+                <option value="Lease House">Lease House</option>
                 <option value="Commercial">Commercial</option>
                 <option value="Farm Lands">Farm Lands</option>
               </select>

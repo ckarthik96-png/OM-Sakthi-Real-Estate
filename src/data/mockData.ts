@@ -1,10 +1,116 @@
+export interface ServiceCategory {
+  title: string;
+  items: string[];
+}
+
+export interface LocationSEO {
+  name: string;
+  slug: string;
+  tagline: string;
+}
+
+export const ALL_SERVICES: Record<string, ServiceCategory> = {
+  residential: {
+    title: "Residential Services",
+    items: [
+      "Buy House", "Sell House", "Rent House", "Lease House",
+      "Buy Apartment", "Sell Apartment", "Rent Apartment", "Lease Apartment",
+      "Buy Villa", "Sell Villa", "Rent Villa", "Lease Villa",
+      "Buy Independent House", "Sell Independent House", "Rent Independent House", "Lease Independent House"
+    ]
+  },
+  land: {
+    title: "Land Services",
+    items: [
+      "Residential Plots", "Villa Plots", "BDA Plots", "BBMP Sites",
+      "DC Converted Sites", "Agricultural Land", "Farm Lands", "Industrial Land",
+      "Commercial Land", "Investment Land"
+    ]
+  },
+  commercial: {
+    title: "Commercial Real Estate",
+    items: [
+      "Office Spaces", "Retail Shops", "Showrooms", "Warehouses",
+      "Industrial Buildings", "Co-working Spaces", "Commercial Leasing", "Commercial Rentals"
+    ]
+  },
+  investment: {
+    title: "Property Investment",
+    items: [
+      "Pre-Launch Projects", "New Launch Projects", "Ready-to-Move Properties",
+      "Luxury Properties", "Investment Consultation", "ROI Analysis", "Rental Income Planning"
+    ]
+  },
+  management: {
+    title: "Property Management",
+    items: [
+      "Tenant Management", "Rent Collection", "Property Maintenance",
+      "Property Inspection", "Property Marketing", "Vacant Property Management", "Owner Representation"
+    ]
+  },
+  legal: {
+    title: "Legal Services",
+    items: [
+      "Property Legal Verification", "Title Verification", "EC Verification",
+      "Khata Verification", "RERA Verification", "Sale Agreement",
+      "Lease Agreement", "Rental Agreement", "Registration Assistance", "Property Mutation"
+    ]
+  },
+  financial: {
+    title: "Financial Services",
+    items: [
+      "Home Loan Assistance", "Loan Eligibility Check", "EMI Calculator",
+      "Balance Transfer Assistance", "Loan Documentation", "Property Valuation"
+    ]
+  },
+  documentation: {
+    title: "Documentation & Registration",
+    items: [
+      "Sale Deed", "Gift Deed", "Lease Deed", "Rental Agreement",
+      "GPA Documentation", "Partition Deed", "Property Registration Support"
+    ]
+  }
+};
+
+export const LEASE_VS_RENT_DATA = [
+  { feature: "Upfront Payment", rent: "Small security deposit (2-10 months)", lease: "Large refundable lease amount (₹5L - ₹50L+)" },
+  { feature: "Monthly Payment", rent: "Monthly rent", lease: "Usually none or nominal maintenance" },
+  { feature: "Agreement Duration", rent: "Typically 11 months", lease: "Usually 1–3 years" },
+  { feature: "Agreement Type", rent: "Rental / Leave & License Agreement", lease: "Registered Lease Deed" },
+  { feature: "Refund", rent: "Security deposit returned after deductions", lease: "Full lease amount returned at end of period" },
+  { feature: "Best For", rent: "Short-term or flexible living", lease: "Long-term occupancy without monthly rent burden" },
+  { feature: "Flexibility", rent: "High", lease: "Lower" },
+  { feature: "Maintenance", rent: "As per rental agreement", lease: "As per lease agreement terms" }
+];
+
+export const SEO_LOCATIONS: LocationSEO[] = [
+  { name: "Muthanallur Cross", slug: "muthanallur-cross", tagline: "Prime Villa & Layout Junction" },
+  { name: "Sarjapur Road", slug: "sarjapur-road", tagline: "Fastest Growing IT & Residential Hub" },
+  { name: "Dommasandra", slug: "dommasandra", tagline: "High-Appreciation Commercial & Plot Belt" },
+  { name: "Attibele", slug: "attibele", tagline: "Industrial & Budget Residential Hub" },
+  { name: "Chandapura", slug: "chandapura", tagline: "Affordable Housing & Layout Connectivity" },
+  { name: "Electronic City", slug: "electronic-city", tagline: "Major IT Corridor & High-Rise Apartments" },
+  { name: "Whitefield", slug: "whitefield", tagline: "Tech Parks & Premium Gated Communities" },
+  { name: "Varthur", slug: "varthur", tagline: "Upcoming Metro & Lakeview Projects" },
+  { name: "Bellandur", slug: "bellandur", tagline: "ORR Tech Hub & Luxury Apartments" },
+  { name: "HSR Layout", slug: "hsr-layout", tagline: "Premium Startup & Residential Sector" },
+  { name: "Marathahalli", slug: "marathahalli", tagline: "Central Connectivity & Retail Corridor" },
+  { name: "Koramangala", slug: "koramangala", tagline: "Ultra-Luxury Real Estate & Hub" },
+  { name: "Hosur Road", slug: "hosur-road", tagline: "Industrial & Expressway Corridor" },
+  { name: "Carmelaram", slug: "carmelaram", tagline: "Railway & Residential Villa Belt" },
+  { name: "Kodathi", slug: "kodathi", tagline: "Educational & Villa Township Area" },
+  { name: "Gunjur", slug: "gunjur", tagline: "Rapidly Developing Residential Hub" },
+  { name: "Harlur", slug: "harlur", tagline: "Off-Sarjapur High-Rise Living" },
+  { name: "Kaikondrahalli", slug: "kaikondrahalli", tagline: "Lakefront & Luxury Residential Sector" }
+];
+
 export interface Property {
   id: string;
   title: string;
   tagline: string;
-  category: 'Apartments' | 'Villas' | 'Plots' | 'Commercial' | 'Farm Lands' | 'Rentals';
+  category: 'Apartments' | 'Villas' | 'Plots' | 'Commercial' | 'Farm Lands' | 'Rentals' | 'Lease House';
   price: string;
-  numericPrice: number; // For filtering
+  numericPrice: number;
   location: string;
   areaSqFt: number;
   bedrooms?: number;
@@ -52,16 +158,15 @@ export const MOCK_PROPERTIES: Property[] = [
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
     gallery: [
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
     ],
     description: "Premium gated community villa with private terrace garden, club house, solar power backup, and top-tier security near Muthanallur Cross hub.",
     amenities: ["Private Garden", "Swimming Pool", "24/7 Security", "Clubhouse", "Power Backup", "EV Charging Station"],
     builder: "OM Sakthi Builders",
     reraId: "PRM/KA/RERA/1251/308/PR/230412",
     address: "Survey No 42/1, Muthanallur Main Road, Sarjapur, Bengaluru - 562125",
-    nearbySchools: ["Delhi Public School (DPS)", "Oakridge International School", "Greenwood High"],
-    nearbyHospitals: ["Columbia Asia Clinic", "Motherhood Hospital", "Manipal Hospital Sarjapur"]
+    nearbySchools: ["Delhi Public School (DPS)", "Oakridge International School"],
+    nearbyHospitals: ["Columbia Asia Clinic", "Motherhood Hospital"]
   },
   {
     id: "sakthi-green-acres",
@@ -75,16 +180,36 @@ export const MOCK_PROPERTIES: Property[] = [
     status: "Ready to Move",
     featured: true,
     image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
-    ],
+    gallery: ["https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"],
     description: "Invest in high-appreciation residential plots featuring asphalt roads, underground drainage, street lights, and instant bank loan approval.",
-    amenities: ["BMRDA Approved", "Underground Drainage", "Blacktop Roads", "Compound Wall", "Water Connection"],
+    amenities: ["BMRDA Approved", "Underground Drainage", "Blacktop Roads", "Compound Wall"],
     builder: "OM Sakthi Infrastructure",
     reraId: "PRM/KA/RERA/1251/308/PR/230919",
     address: "Near Dommasandra Circle, Sarjapur Main Road, Bengaluru",
-    nearbySchools: ["Inventure Academy", "TISB International School"],
-    nearbyHospitals: ["Spandana Hospital", "Narayana Hrudayalaya"]
+    nearbySchools: ["Inventure Academy", "TISB"],
+    nearbyHospitals: ["Spandana Hospital"]
+  },
+  {
+    id: "sakthi-lease-villa",
+    title: "Executive 3 BHK Lease Villa",
+    tagline: "Zero Monthly Rent - Long Term Lease Option",
+    category: "Lease House",
+    price: "₹ 25.0 Lakhs (Refundable Deposit)",
+    numericPrice: 2500000,
+    location: "Muthanallur Cross",
+    areaSqFt: 2200,
+    bedrooms: 3,
+    bathrooms: 3,
+    status: "Ready to Move",
+    featured: true,
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80",
+    gallery: ["https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80"],
+    description: "Occupancy for 2-3 years under registered lease deed. 100% refundable lease amount upon exit.",
+    amenities: ["Covered Parking", "Solar Water Heater", "Gated Security", "Power Backup"],
+    builder: "OM Sakthi Managed",
+    address: "Muthanallur Cross, Sarjapur, Bengaluru",
+    nearbySchools: ["DPS Sarjapur"],
+    nearbyHospitals: ["Town Hospital"]
   },
   {
     id: "royal-palms-apartment",
@@ -100,60 +225,13 @@ export const MOCK_PROPERTIES: Property[] = [
     status: "Under Construction",
     featured: true,
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
-    ],
-    description: "Experience modern urban living with 30+ lifestyle amenities, sky lounge, children's play park, and rapid connectivity to IT parks in Whitefield & Bellandur.",
-    amenities: ["Gymnasium", "Rooftop Swimming Pool", "Squash Court", "Kid's Play Area", "CCTV Surveillance"],
+    gallery: ["https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"],
+    description: "Experience modern urban living with 30+ lifestyle amenities, sky lounge, children's play park.",
+    amenities: ["Gymnasium", "Rooftop Swimming Pool", "CCTV Surveillance"],
     builder: "Prestige Group Partnered",
-    address: "Dommasandra Junction, Sarjapur - Attibele Road, Bengaluru",
-    nearbySchools: ["Sarjapur Public School", "St. Philomena High School"],
-    nearbyHospitals: ["Town Hospital Sarjapur", "Punya Hospital"]
-  },
-  {
-    id: "sakthi-commercial-hub",
-    title: "OM Sakthi Commercial Retail Plaza",
-    tagline: "High Footfall Commercial Showrooms & Office Spaces",
-    category: "Commercial",
-    price: "₹ 2.40 Cr",
-    numericPrice: 24000000,
-    location: "Muthanallur Cross",
-    areaSqFt: 2800,
-    status: "Ready to Move",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
-    ],
-    description: "Prime main road facing commercial property ideal for retail chains, banks, clinics, and IT offices at Muthanallur Cross junction.",
-    amenities: ["100% Power Backup", "High-speed Elevators", "Basement Parking", "Fire Safety System"],
-    builder: "OM Sakthi Commercial",
-    address: "Main Muthanallur Cross Junction, Sarjapur Road, Bengaluru",
-    nearbySchools: [],
-    nearbyHospitals: []
-  },
-  {
-    id: "green-valley-farms",
-    title: "Green Valley Agro Farm Lands",
-    tagline: "1/4 Acre & 1/2 Acre Managed Farm Plots with Fruit Trees",
-    category: "Farm Lands",
-    price: "₹ 62.0 Lakhs",
-    numericPrice: 6200000,
-    location: "Attibele - Sarjapur Belt",
-    areaSqFt: 10890,
-    status: "Ready to Move",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=1200&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=1200&q=80"
-    ],
-    description: "Serene weekend getaway farm plots planted with Teak, Mahogany, and Organic Fruit trees with drip irrigation and 24/7 caretaker system.",
-    amenities: ["Drip Irrigation", "Fenced Boundary", "Caretaker Service", "Drip System", "Clubhouse Access"],
-    builder: "OM Sakthi Eco Lands",
-    address: "Near Attibele Road, Sarjapur Border, Bengaluru",
-    nearbySchools: [],
-    nearbyHospitals: []
+    address: "Dommasandra Junction, Sarjapur Road",
+    nearbySchools: ["Sarjapur Public School"],
+    nearbyHospitals: ["Punya Hospital"]
   }
 ];
 
@@ -168,30 +246,6 @@ export const MOCK_LEADS: Lead[] = [
     location: "Muthanallur Cross",
     status: "Site Visit Scheduled",
     date: "2026-08-06",
-    notes: "Client requested site visit on Saturday 11 AM. Prefers East facing villa."
-  },
-  {
-    id: "lead-102",
-    name: "Priya Sharma",
-    phone: "+91 97110 56789",
-    email: "priya.sharma@techcorp.com",
-    propertyInterest: "Sakthi Premium Residential Plots",
-    budget: "₹ 40 L - ₹ 60 L",
-    location: "Sarjapur Road",
-    status: "New",
-    date: "2026-08-06",
-    notes: "Inquired via AI Assistant chatbot on website."
-  },
-  {
-    id: "lead-103",
-    name: "Suresh Reddy",
-    phone: "+91 99001 88822",
-    email: "sreddy@investments.in",
-    propertyInterest: "OM Sakthi Commercial Retail Plaza",
-    budget: "₹ 2 Cr+",
-    location: "Muthanallur Cross",
-    status: "Negotiation",
-    date: "2026-08-05",
-    notes: "Looking for ground floor showroom space for bank branch."
+    notes: "Client requested site visit on Saturday 11 AM."
   }
 ];
