@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Layers, Image as ImageIcon, Video, Compass, Sparkles, CheckCircle2, ShieldCheck } from 'lucide-react';
+import PanoramaViewer360 from './PanoramaViewer360';
 
 interface InteractiveMediaViewerProps {
   heroImage: string;
@@ -97,19 +98,10 @@ export default function InteractiveMediaViewer({ heroImage, galleryImages, title
           </div>
         )}
 
-        {/* 360° Virtual Tour Mockup Mode */}
+        {/* 360° Virtual Tour Interactive Mode */}
         {activeMode === 'virtual360' && (
-          <div className="w-full h-[380px] sm:h-[480px] relative bg-slate-900 flex flex-col items-center justify-center text-white p-6 text-center">
-            <div className="w-20 h-20 rounded-full bg-[#0F4C81]/40 border-2 border-[#D4AF37] flex items-center justify-center mb-4 animate-pulse">
-              <Compass className="w-10 h-10 text-[#D4AF37]" />
-            </div>
-            <h4 className="text-xl font-bold mb-1">360° Interactive Virtual Tour</h4>
-            <p className="text-xs text-slate-400 max-w-md mb-6">
-              Drag cursor to look around the villa living room and master suite layout.
-            </p>
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl text-xs font-semibold text-[#D4AF37] border border-white/20">
-              <Sparkles className="w-4 h-4" /> Drag to Pan 360° (Interactive Mode Enabled)
-            </div>
+          <div className="w-full">
+            <PanoramaViewer360 title={title} />
           </div>
         )}
 
