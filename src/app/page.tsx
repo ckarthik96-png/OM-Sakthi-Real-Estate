@@ -7,8 +7,8 @@ import FeaturedProperties from '@/components/FeaturedProperties';
 import AiPropertyAssistant from '@/components/AiPropertyAssistant';
 import Link from 'next/link';
 import { 
-  Building2, ShieldCheck, FileCheck, Landmark, Home, 
-  MapPin, CheckCircle2, Phone, Mail, Clock, Send, Star, ArrowRight, UserCheck
+  Building2, ShieldCheck, Landmark, MapPin, CheckCircle2, 
+  Phone, Mail, Clock, Send, ArrowRight, Award, Compass, Sparkles, TrendingUp
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -22,24 +22,73 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#FAFAFB] flex flex-col font-sans">
       <Navbar />
 
       <main className="flex-grow">
-        {/* Hero Section */}
+        {/* Act 1: Cinematic Full-Screen Hero */}
         <HeroSearch />
 
-        {/* Featured Listings Section */}
+        {/* Act 2: DLF-Style Corporate Brand Statement & Market Metrics */}
+        <section className="py-20 bg-slate-950 text-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/40 text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-4">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>The Benchmark of Luxury & Trust</span>
+                </div>
+                <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
+                  Redefining Real Estate Excellence in <span className="gold-gradient-text">Sarjapur & Muthanallur</span>
+                </h2>
+                <p className="text-slate-300 text-sm leading-relaxed mb-8 font-light">
+                  OM Sakthi Real Estate brings an enterprise-grade digital flagship portal for luxury homebuyers, land investors, and corporate tenants. Combining complete RERA legal due diligence with personal relationship advisory.
+                </p>
+
+                <div className="grid grid-cols-3 gap-6 pt-6 border-t border-slate-800 text-center">
+                  <div>
+                    <span className="text-2xl sm:text-4xl font-extrabold text-[#D4AF37] block">15+</span>
+                    <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Years Excellence</span>
+                  </div>
+                  <div>
+                    <span className="text-2xl sm:text-4xl font-extrabold text-white block">100%</span>
+                    <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">RERA Verified</span>
+                  </div>
+                  <div>
+                    <span className="text-2xl sm:text-4xl font-extrabold text-[#D4AF37] block">₹500Cr+</span>
+                    <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Assets Advised</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* DLF Style Luxury Interior Showcase */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" 
+                  alt="DLF Style Modern Interior"
+                  className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider block mb-1">Architectural Benchmark</span>
+                  <h4 className="text-lg font-bold text-white">4 BHK Ultra-Luxury Independent Villas</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Act 3: Featured Luxury Property Portfolios */}
         <FeaturedProperties />
 
-        {/* Why Choose Us */}
-        <section className="py-16 bg-white border-y border-slate-200">
+        {/* Act 4: Why Choose OM Sakthi */}
+        <section className="py-20 bg-white border-y border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-[#0F4C81] text-xs font-bold uppercase tracking-wider bg-[#0F4C81]/10 px-3 py-1 rounded-full">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <span className="text-[#0F4C81] text-xs font-extrabold uppercase tracking-wider bg-[#0F4C81]/10 px-3.5 py-1 rounded-full">
                 Sarjapur Property Pioneers
               </span>
-              <h2 className="text-3xl font-extrabold text-slate-900 mt-3 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
                 Why Choose OM Sakthi Real Estate?
               </h2>
               <p className="text-slate-600 text-sm mt-2">
@@ -48,31 +97,31 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
-                <div className="w-12 h-12 rounded-xl bg-[#0F4C81] text-[#D4AF37] flex items-center justify-center mb-4">
-                  <ShieldCheck className="w-6 h-6" />
+              <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-xl transition duration-300 group">
+                <div className="w-14 h-14 rounded-2xl bg-[#0F4C81] text-[#D4AF37] flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition">
+                  <ShieldCheck className="w-7 h-7" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">100% Legal & RERA Verified</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">100% Legal & RERA Verified</h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Every plot, villa, and apartment listed goes through rigorous title verification, encumbrance check, and RERA compliance verification before showcase.
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
-                <div className="w-12 h-12 rounded-xl bg-[#0F4C81] text-[#D4AF37] flex items-center justify-center mb-4">
-                  <MapPin className="w-6 h-6" />
+              <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-xl transition duration-300 group">
+                <div className="w-14 h-14 rounded-2xl bg-[#0F4C81] text-[#D4AF37] flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition">
+                  <MapPin className="w-7 h-7" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">Muthanallur & Sarjapur Experts</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Muthanallur & Sarjapur Experts</h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Headquartered at Muthanallur Cross junction, our local agents hold decades of collective experience across Sarjapur, Dommasandra & Attibele corridors.
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition">
-                <div className="w-12 h-12 rounded-xl bg-[#0F4C81] text-[#D4AF37] flex items-center justify-center mb-4">
-                  <Landmark className="w-6 h-6" />
+              <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:shadow-xl transition duration-300 group">
+                <div className="w-14 h-14 rounded-2xl bg-[#0F4C81] text-[#D4AF37] flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition">
+                  <Landmark className="w-7 h-7" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">Home Loan & Registration Support</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Home Loan & Registration Support</h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Direct tie-ups with SBI, HDFC, ICICI, and Axis Bank for instant home loan approvals and complete sub-registrar office registration assistance.
                 </p>
@@ -81,81 +130,17 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Comprehensive Services */}
-        <section id="services" className="py-16 bg-slate-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full">
-                End-To-End Real Estate Solutions
-              </span>
-              <h2 className="text-3xl font-extrabold mt-3 tracking-tight">
-                Our Services & Consultation
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
-              {[
-                { title: 'Property Buying', desc: 'Villas, Flats & Plots' },
-                { title: 'Property Selling', desc: 'Best Market Valuation' },
-                { title: 'Rentals & Leasing', desc: 'Residential & Commercial' },
-                { title: 'Legal Verification', desc: 'Title & EC Clearance' },
-                { title: 'Home Loans', desc: 'Fast Bank Approvals' },
-                { title: 'Investment Advisory', desc: 'High ROI Micro-markets' },
-              ].map((srv, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#D4AF37] transition">
-                  <CheckCircle2 className="w-6 h-6 text-[#D4AF37] mx-auto mb-2" />
-                  <h4 className="font-bold text-sm text-white mb-1">{srv.title}</h4>
-                  <p className="text-[11px] text-slate-400">{srv.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Popular Micro-locations Grid */}
-        <section id="locations" className="py-16 bg-slate-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-                Explore Prime Locations in Sarjapur Belt
-              </h2>
-              <p className="text-slate-600 text-sm mt-2">
-                Discover high-appreciation residential hubs with excellent connectivity to IT corridors.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { name: 'Muthanallur Cross', desc: 'Villa Hub & Main Junction', count: '14 Properties' },
-                { name: 'Sarjapur Main Road', desc: 'High-rise & Gated Layouts', count: '28 Properties' },
-                { name: 'Dommasandra Circle', desc: 'Rapidly Growing Market', count: '10 Properties' },
-                { name: 'Attibele - Sarjapur Belt', desc: 'Farm Lands & Commercial Plots', count: '8 Properties' },
-              ].map((loc, idx) => (
-                <div key={idx} className="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-[#0F4C81] transition group">
-                  <MapPin className="w-5 h-5 text-[#0F4C81] mb-3 group-hover:scale-110 transition" />
-                  <h3 className="font-bold text-slate-900 text-base">{loc.name}</h3>
-                  <p className="text-xs text-slate-500 mt-1">{loc.desc}</p>
-                  <div className="mt-4 text-[11px] font-semibold text-[#0F4C81] bg-[#0F4C81]/10 px-2.5 py-1 rounded-md inline-block">
-                    {loc.count}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Form & Office Info */}
-        <section id="contact" className="py-16 bg-white border-t border-slate-200">
+        {/* Act 5: Doorstep Site Visit Appointment Scheduler */}
+        <section id="contact" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               
-              {/* Office Details */}
               <div>
                 <span className="text-[#0F4C81] text-xs font-bold uppercase tracking-wider bg-[#0F4C81]/10 px-3 py-1 rounded-full">
-                  Visit Our Office
+                  Visit Our HQ
                 </span>
-                <h2 className="text-3xl font-extrabold text-slate-900 mt-3 mb-6">
-                  Get in Touch with Our Real Estate Experts
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-6">
+                  Schedule a Doorstep Site Visit
                 </h2>
                 
                 <div className="space-y-6 text-sm text-slate-700">
@@ -180,21 +165,11 @@ export default function HomePage() {
                       <p className="text-slate-600 text-xs mt-0.5">+91 98450 12345 / +91 98450 67890</p>
                     </div>
                   </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#0F4C81] text-white flex items-center justify-center shrink-0">
-                      <Clock className="w-5 h-5 text-[#D4AF37]" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900">Working Hours</h4>
-                      <p className="text-slate-600 text-xs mt-0.5">Monday – Sunday: 9:00 AM – 8:00 PM</p>
-                    </div>
-                  </div>
                 </div>
 
                 <div className="mt-8 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-center justify-between">
                   <div>
-                    <span className="font-bold block">Need an Agent for Site Visit?</span>
+                    <span className="font-bold block">Need an Agent Pick-up?</span>
                     <span>Free doorstep pick & drop for genuine property buyers around Sarjapur.</span>
                   </div>
                   <a href="tel:+919845012345" className="bg-[#0F4C81] text-white font-bold px-3 py-2 rounded-lg text-xs shrink-0">
@@ -204,8 +179,8 @@ export default function HomePage() {
               </div>
 
               {/* Consultation / Site Visit Request Form */}
-              <div className="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">Book a Free Property Site Visit</h3>
+              <div className="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Book a Private Site Visit</h3>
                 <p className="text-xs text-slate-600 mb-6">Fill in your details and our Senior Property Advisor will get back to you within 30 minutes.</p>
 
                 {submitted ? (
@@ -257,7 +232,7 @@ export default function HomePage() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">Message / Requirements (Optional)</label>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Message / Requirements</label>
                       <textarea 
                         rows={3} 
                         value={formData.message}
@@ -269,9 +244,9 @@ export default function HomePage() {
 
                     <button 
                       type="submit"
-                      className="w-full bg-[#0F4C81] hover:bg-[#0A365C] text-white font-bold py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-xs"
+                      className="w-full gold-gradient-button py-3 rounded-xl shadow-md flex items-center justify-center gap-2 text-xs uppercase tracking-wider font-extrabold"
                     >
-                      <Send className="w-4 h-4 text-[#D4AF37]" />
+                      <Send className="w-4 h-4 text-slate-900" />
                       <span>Request Callback & Site Visit</span>
                     </button>
                   </form>
@@ -281,54 +256,53 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
       </main>
 
       <AiPropertyAssistant />
 
-      {/* Footer */}
-      <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      {/* Act 6: Luxury DLF-Style Footer */}
+      <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-800 text-xs">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
-            <div className="font-extrabold text-lg text-white mb-2 flex items-center gap-2">
-              <Building2 className="w-5 h-5 text-[#D4AF37]" />
+            <div className="font-extrabold text-xl text-white mb-3 flex items-center gap-2">
+              <Building2 className="w-6 h-6 text-[#D4AF37]" />
               OM SAKTHI REAL ESTATE
             </div>
             <p className="text-slate-400 leading-relaxed text-xs">
-              Sarjapur’s leading real estate agency specializing in luxury villas, residential plots, apartments, and commercial investments near Muthanallur Cross.
+              Sarjapur’s leading luxury real estate flagship platform specializing in villas, plots, smart apartments, and commercial investments near Muthanallur Cross.
             </p>
           </div>
 
           <div>
-            <h4 className="font-bold text-white text-sm mb-3">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link href="/properties" className="hover:text-[#D4AF37]">All Listings</Link></li>
-              <li><Link href="/#services" className="hover:text-[#D4AF37]">Services & Legal Advice</Link></li>
-              <li><Link href="/admin" className="hover:text-[#D4AF37]">CRM Admin Portal</Link></li>
+            <h4 className="font-bold text-white text-sm mb-4 uppercase tracking-wider">Quick Portals</h4>
+            <ul className="space-y-2.5">
+              <li><Link href="/properties" className="hover:text-[#D4AF37] transition">All Verified Listings</Link></li>
+              <li><Link href="/services" className="hover:text-[#D4AF37] transition">Services & Legal Advice</Link></li>
+              <li><Link href="/admin" className="hover:text-[#D4AF37] transition">CRM & Agent Portal</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-white text-sm mb-3">Key Locations</h4>
-            <ul className="space-y-2">
+            <h4 className="font-bold text-white text-sm mb-4 uppercase tracking-wider">Sarjapur Corridors</h4>
+            <ul className="space-y-2.5">
               <li>Muthanallur Cross Junction</li>
               <li>Sarjapur Main Road</li>
               <li>Dommasandra Circle</li>
-              <li>Attibele Industrial & Residential Belt</li>
+              <li>Attibele Industrial Belt</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-white text-sm mb-3">Office Address</h4>
+            <h4 className="font-bold text-white text-sm mb-4 uppercase tracking-wider">Headquarters</h4>
             <p className="text-xs text-slate-400 leading-relaxed">
               Muthanallur Cross Junction, Sarjapur Main Road, Bengaluru, KA 562125
             </p>
-            <p className="mt-2 text-white font-semibold">+91 98450 12345</p>
+            <p className="mt-3 text-white font-extrabold text-sm">+91 98450 12345</p>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-slate-900 text-center text-slate-500 text-[11px]">
-          © {new Date().getFullYear()} OM Sakthi Real Estate. All rights reserved. Built for enterprise performance.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-900 text-center text-slate-500 text-[11px]">
+          © {new Date().getFullYear()} OM Sakthi Real Estate. Built per Master Project Bible v1.0 specifications.
         </div>
       </footer>
     </div>
