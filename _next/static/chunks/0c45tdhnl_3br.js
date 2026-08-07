@@ -7,37 +7,37 @@
 
 No.29, 3rd Main Road, Arasappa Layout, Muthanallur Cross Junction, Sarjapur Main Road, Bengaluru, Karnataka - 562125.
 
-📍 Landmark: Opposite Muthanallur Circle, Sarjapur Road.`,link:{url:"https://ckarthik96-png.github.io/OM-Sakthi-Real-Estate/#contact",label:"Book Doorstep Pick-up & Site Visit"}};if(t.includes("lease")||t.includes("rent")||t.includes("refundable")||t.includes("deposit")){let e=d.MOCK_PROPERTIES.find(e=>"Lease House"===e.category);return{sender:"ai",text:`🏠 **Refundable Lease House Scheme**:
+📍 Landmark: Opposite Muthanallur Circle, Sarjapur Road.`,link:{url:"/#contact",label:"Book Doorstep Pick-up & Site Visit"}};if(t.includes("lease")||t.includes("rent")||t.includes("refundable")||t.includes("deposit")){let e=d.MOCK_PROPERTIES.find(e=>"Lease House"===e.category);return{sender:"ai",text:`🏠 **Refundable Lease House Scheme**:
 
 We offer registered 3-year lease homes with **100% refundable deposit** and ZERO monthly rent burden!
 
 Featured Listing: **${e?.title}** (${e?.location})
-Price Deposit: **${e?.price}**`,link:{url:`/OM-Sakthi-Real-Estate/properties/${e?.id}`,label:"View Lease Villa Details"},propertyCard:e}}if(t.includes("villa")||t.includes("house")||t.includes("duplex")||t.includes("gated")){let e=d.MOCK_PROPERTIES.find(e=>"Villas"===e.category);return{sender:"ai",text:`🏡 **Luxury Gated Community Villas**:
+Price Deposit: **${e?.price}**`,link:{url:`/properties/${e?.id}`,label:"View Lease Villa Details"},propertyCard:e}}if(t.includes("villa")||t.includes("house")||t.includes("duplex")||t.includes("gated")){let e=d.MOCK_PROPERTIES.find(e=>"Villas"===e.category);return{sender:"ai",text:`🏡 **Luxury Gated Community Villas**:
 
 We have premium 3 BHK & 4 BHK villas featuring private gardens, swimming pools, clubhouse, and 24/7 security near Muthanallur Cross & Sarjapur.
 
 Top Pick: **${e?.title}**
-Price: **${e?.price}** (${e?.areaSqFt} sq.ft)`,link:{url:`/OM-Sakthi-Real-Estate/properties/${e?.id}`,label:"Explore Villa Project"},propertyCard:e}}if(t.includes("plot")||t.includes("land")||t.includes("bmrda")||t.includes("site")||t.includes("acre")||t.includes("layout")){let e=d.MOCK_PROPERTIES.find(e=>"Plots"===e.category);return{sender:"ai",text:`📐 **BMRDA Approved Residential Plots**:
+Price: **${e?.price}** (${e?.areaSqFt} sq.ft)`,link:{url:`/properties/${e?.id}`,label:"Explore Villa Project"},propertyCard:e}}if(t.includes("plot")||t.includes("land")||t.includes("bmrda")||t.includes("site")||t.includes("acre")||t.includes("layout")){let e=d.MOCK_PROPERTIES.find(e=>"Plots"===e.category);return{sender:"ai",text:`📐 **BMRDA Approved Residential Plots**:
 
 We feature 30x40, 30x50 & 40x60 sites with 100% clear titles, asphalt roads, underground water/drainage, and instant bank loan clearance.
 
 Featured Site: **${e?.title}**
-Price: **${e?.price}**`,link:{url:`/OM-Sakthi-Real-Estate/properties/${e?.id}`,label:"View Plot Blueprint & Layout"},propertyCard:e}}if(t.includes("apartment")||t.includes("flat")||t.includes("bhk")||t.includes("high rise")||t.includes("tower")){let e=d.MOCK_PROPERTIES.find(e=>"Apartments"===e.category);return{sender:"ai",text:`🏢 **Smart High-Rise Apartments**:
+Price: **${e?.price}**`,link:{url:`/properties/${e?.id}`,label:"View Plot Blueprint & Layout"},propertyCard:e}}if(t.includes("apartment")||t.includes("flat")||t.includes("bhk")||t.includes("high rise")||t.includes("tower")){let e=d.MOCK_PROPERTIES.find(e=>"Apartments"===e.category);return{sender:"ai",text:`🏢 **Smart High-Rise Apartments**:
 
 Explore 2 & 3 BHK luxury apartments with 30+ lifestyle amenities, rooftop pools, and lake views in Dommasandra & Sarjapur.
 
 Featured Project: **${e?.title}**
-Price: **${e?.price}**`,link:{url:`/OM-Sakthi-Real-Estate/properties/${e?.id}`,label:"View Apartment Blueprint"},propertyCard:e}}if(t.includes("commercial")||t.includes("office")||t.includes("shop")||t.includes("retail")||t.includes("store")||t.includes("bank")){let e=d.MOCK_PROPERTIES.find(e=>"Commercial"===e.category);return{sender:"ai",text:`🏢 **Main Road Commercial Real Estate**:
+Price: **${e?.price}**`,link:{url:`/properties/${e?.id}`,label:"View Apartment Blueprint"},propertyCard:e}}if(t.includes("commercial")||t.includes("office")||t.includes("shop")||t.includes("retail")||t.includes("store")||t.includes("bank")){let e=d.MOCK_PROPERTIES.find(e=>"Commercial"===e.category);return{sender:"ai",text:`🏢 **Main Road Commercial Real Estate**:
 
 High footfall retail showrooms and plug-and-play IT office floors facing main junction corridors.
 
 Featured Property: **${e?.title}**
-Price: **${e?.price}**`,link:{url:`/OM-Sakthi-Real-Estate/properties/${e?.id}`,label:"View Commercial Space"},propertyCard:e}}let s=d.SEO_LOCATIONS.find(e=>t.includes(e.name.toLowerCase())||t.includes(e.slug));if(s)return{sender:"ai",text:`📍 **Properties in ${s.name}**:
+Price: **${e?.price}**`,link:{url:`/properties/${e?.id}`,label:"View Commercial Space"},propertyCard:e}}let s=d.SEO_LOCATIONS.find(e=>t.includes(e.name.toLowerCase())||t.includes(e.slug));if(s)return{sender:"ai",text:`📍 **Properties in ${s.name}**:
 
 ${s.overview}
 
 Avg. Price: **${s.avgPricePerSqFt}**
-We have 6 verified projects listed in ${s.name}.`,link:{url:`/OM-Sakthi-Real-Estate/locations/${s.slug}`,label:`Browse 6 Projects in ${s.name}`}};if(t.includes("emi")||t.includes("loan")||t.includes("bank")||t.includes("interest")||t.includes("stamp")||t.includes("registration"))return{sender:"ai",text:`📊 **Home Loan & Legal Guidance**:
+We have 6 verified projects listed in ${s.name}.`,link:{url:`/locations/${s.slug}`,label:`Browse 6 Projects in ${s.name}`}};if(t.includes("emi")||t.includes("loan")||t.includes("bank")||t.includes("interest")||t.includes("stamp")||t.includes("registration"))return{sender:"ai",text:`📊 **Home Loan & Legal Guidance**:
 
 We provide 80% to 90% instant home loan approvals with **SBI, HDFC, ICICI & Axis Bank** at ~8.5% p.a.
 
