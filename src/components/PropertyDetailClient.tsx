@@ -16,6 +16,29 @@ export default function PropertyDetailClient({ property }: { property: Property 
   // Navigation Tabs state (Prestige Group Pattern)
   const [activeTab, setActiveTab] = useState<'about' | 'plans' | 'amenities' | 'location' | 'gallery'>('about');
 
+  // Lightbox Modal State matching Prestige image slideshow overlay
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const GALLERY_IMAGES = [
+    { title: "Grand Clubhouse", src: "/OM-Sakthi-Real-Estate/gallery_grand_clubhouse.jpg", fallback: "/gallery_grand_clubhouse.jpg" },
+    { title: "Shaded Gazebo", src: "/OM-Sakthi-Real-Estate/gallery_shaded_gazebo.jpg", fallback: "/gallery_shaded_gazebo.jpg" },
+    { title: "Entrance Archway", src: "/OM-Sakthi-Real-Estate/gallery_entrance_archway.jpg", fallback: "/gallery_entrance_archway.jpg" },
+    { title: "Bubbler Fountain", src: "/OM-Sakthi-Real-Estate/gallery_bubbler_fountain.jpg", fallback: "/gallery_bubbler_fountain.jpg" },
+    { title: "Sports Courts", src: "/OM-Sakthi-Real-Estate/gallery_sports_courts.jpg", fallback: "/gallery_sports_courts.jpg" },
+    { title: "Aerial Master View", src: "/OM-Sakthi-Real-Estate/gallery_aerial_master_view.jpg", fallback: "/gallery_aerial_master_view.jpg" },
+    { title: "Miyawaki Greens & Play Lawn", src: "/OM-Sakthi-Real-Estate/gallery_miyawaki_greens.jpg", fallback: "/gallery_miyawaki_greens.jpg" }
+  ];
+
+  const handleNextPhoto = () => {
+    setLightboxIndex((prev) => (prev + 1) % GALLERY_IMAGES.length);
+  };
+
+  const handlePrevPhoto = () => {
+    setLightboxIndex((prev) => (prev - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length);
+  };
+
   // Contact Form state
   const [leadForm, setLeadForm] = useState({ mobile: '', email: '', whatsapp: true });
   const [leadSubmitted, setLeadSubmitted] = useState(false);
@@ -304,94 +327,35 @@ export default function PropertyDetailClient({ property }: { property: Property 
 
               {/* Section 4: Gallery (Cohesive High-Resolution Villa Project Photos matching building architecture) */}
               <section id="gallery" className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-                <div className="border-b border-slate-200 pb-4">
+                <div className="border-b border-slate-200 pb-4 flex justify-between items-center">
                   <h2 className="text-3xl font-extrabold text-slate-800 tracking-tight">Gallery</h2>
+                  <span className="text-xs font-bold text-slate-400">Click any photo for Full-Screen Slideshow</span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
-                    <img 
-                      src="/OM-Sakthi-Real-Estate/gallery_grand_clubhouse.jpg" 
-                      alt="Grand Clubhouse Exterior"
-                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_grand_clubhouse.jpg"; }}
-                    />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
-                      Grand Clubhouse
-                    </span>
-                  </div>
-
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
-                    <img 
-                      src="/OM-Sakthi-Real-Estate/gallery_shaded_gazebo.jpg" 
-                      alt="Shaded Gazebo & Seating"
-                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_shaded_gazebo.jpg"; }}
-                    />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
-                      Shaded Gazebo
-                    </span>
-                  </div>
-
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
-                    <img 
-                      src="/OM-Sakthi-Real-Estate/gallery_entrance_archway.jpg" 
-                      alt="Grand Archway Entrance Boulevard"
-                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_entrance_archway.jpg"; }}
-                    />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
-                      Entrance Archway
-                    </span>
-                  </div>
-
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
-                    <img 
-                      src="/OM-Sakthi-Real-Estate/gallery_bubbler_fountain.jpg" 
-                      alt="Central Bubbler Fountain Plaza"
-                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_bubbler_fountain.jpg"; }}
-                    />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
-                      Bubbler Fountain
-                    </span>
-                  </div>
-
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
-                    <img 
-                      src="/OM-Sakthi-Real-Estate/gallery_sports_courts.jpg" 
-                      alt="Sports Courts Facility"
-                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_sports_courts.jpg"; }}
-                    />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
-                      Sports Courts
-                    </span>
-                  </div>
-
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900">
-                    <img 
-                      src="/OM-Sakthi-Real-Estate/gallery_aerial_master_view.jpg" 
-                      alt="Aerial Master Township View"
-                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_aerial_master_view.jpg"; }}
-                    />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
-                      Aerial Master View
-                    </span>
-                  </div>
-
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900 sm:col-span-2 lg:col-span-2">
-                    <img 
-                      src="/OM-Sakthi-Real-Estate/gallery_miyawaki_greens.jpg" 
-                      alt="Miyawaki Greens & Children Play Lawn"
-                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-                      onError={(e) => { (e.target as HTMLImageElement).src = "/gallery_miyawaki_greens.jpg"; }}
-                    />
-                    <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
-                      Miyawaki Greens & Play Lawn
-                    </span>
-                  </div>
+                  {GALLERY_IMAGES.map((img, idx) => (
+                    <div 
+                      key={idx}
+                      onClick={() => {
+                        setLightboxIndex(idx);
+                        setLightboxOpen(true);
+                      }}
+                      className={`relative h-64 rounded-2xl overflow-hidden shadow-sm group border border-slate-200 bg-slate-900 cursor-pointer hover:border-[#0F4C81] transition duration-300 ${
+                        idx === 6 ? 'sm:col-span-2 lg:col-span-2' : ''
+                      }`}
+                    >
+                      <img 
+                        src={img.src} 
+                        alt={img.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        onError={(e) => { (e.target as HTMLImageElement).src = img.fallback; }}
+                      />
+                      <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition duration-300" />
+                      <span className="absolute bottom-3 left-3 bg-slate-950/80 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
+                        {img.title}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </section>
 
@@ -573,6 +537,88 @@ export default function PropertyDetailClient({ property }: { property: Property 
       </main>
 
       <AiPropertyAssistant />
+
+      {/* Full-Screen Image Lightbox Slideshow Overlay (Exact Prestige Reference Screenshot) */}
+      {lightboxOpen && (
+        <div className="fixed inset-0 z-50 bg-neutral-900/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-6 animate-in fade-in duration-200 select-none">
+          
+          {/* Top Right Controls Toolbar (Search/Zoom, Play/Autoplay, Close X) */}
+          <div className="flex items-center justify-end gap-2 text-white z-20">
+            <div className="bg-neutral-800/90 rounded-xl p-1.5 flex items-center gap-1 border border-neutral-700 shadow-lg">
+              <button 
+                onClick={() => setIsPlaying(!isPlaying)}
+                className="p-2.5 hover:bg-neutral-700 rounded-lg text-white transition"
+                title={isPlaying ? "Pause Slideshow" : "Play Automatic Slideshow"}
+              >
+                {isPlaying ? <span className="font-bold text-xs">⏸</span> : <span className="font-bold text-xs">▶</span>}
+              </button>
+              <button 
+                onClick={() => setLightboxOpen(false)}
+                className="p-2.5 hover:bg-neutral-700 rounded-lg text-white transition text-lg font-bold"
+                title="Close Full-Screen View"
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+
+          {/* Main Full-Screen Display Image */}
+          <div className="relative flex-1 flex items-center justify-center my-4 overflow-hidden">
+            
+            {/* Left Arrow Button */}
+            <button
+              onClick={handlePrevPhoto}
+              className="absolute left-2 sm:left-6 z-30 bg-neutral-800/80 hover:bg-neutral-700 text-white p-3 sm:p-4 rounded-xl border border-neutral-700 shadow-xl transition hover:scale-105"
+              title="Previous Photo"
+            >
+              ←
+            </button>
+
+            <div className="max-w-5xl max-h-[75vh] relative rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 bg-black">
+              <img 
+                src={GALLERY_IMAGES[lightboxIndex].src} 
+                alt={GALLERY_IMAGES[lightboxIndex].title}
+                className="w-full h-full object-contain max-h-[75vh]"
+                onError={(e) => { (e.target as HTMLImageElement).src = GALLERY_IMAGES[lightboxIndex].fallback; }}
+              />
+              <div className="absolute bottom-4 left-4 bg-black/75 backdrop-blur-md px-4 py-2 rounded-xl text-white text-xs font-bold border border-white/10">
+                {GALLERY_IMAGES[lightboxIndex].title} ({lightboxIndex + 1} / {GALLERY_IMAGES.length})
+              </div>
+            </div>
+
+            {/* Right Arrow Button (Matching User Screenshot) */}
+            <button
+              onClick={handleNextPhoto}
+              className="absolute right-2 sm:right-6 z-30 bg-neutral-800/80 hover:bg-neutral-700 text-white p-3 sm:p-4 rounded-xl border border-neutral-700 shadow-xl transition hover:scale-105"
+              title="Next Photo"
+            >
+              →
+            </button>
+
+          </div>
+
+          {/* Bottom Thumbnail Navigation Strip */}
+          <div className="flex items-center justify-center gap-2 overflow-x-auto py-2 no-scrollbar">
+            {GALLERY_IMAGES.map((img, idx) => (
+              <button
+                key={idx}
+                onClick={() => setLightboxIndex(idx)}
+                className={`w-16 h-12 rounded-lg overflow-hidden border-2 transition shrink-0 ${
+                  lightboxIndex === idx ? 'border-[#D4AF37] scale-105 shadow-md' : 'border-neutral-700 opacity-60 hover:opacity-100'
+                }`}
+              >
+                <img 
+                  src={img.src} 
+                  alt={img.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => { (e.target as HTMLImageElement).src = img.fallback; }}
+                />
+              </button>
+            ))}
+          </div>
+
+        </div>
+      )}
     </div>
   );
 }
