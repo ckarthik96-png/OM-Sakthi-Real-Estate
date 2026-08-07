@@ -39,7 +39,7 @@ export default function AiPropertyAssistant() {
       } else if (lower.includes('apartment') || lower.includes('flat') || lower.includes('bhk')) {
         reply = `Check out **Royal Palms High-Rise Apartments** in Dommasandra! 3 BHK smart homes with 30+ amenities priced at ₹95 Lakhs.`;
       } else if (lower.includes('contact') || lower.includes('call') || lower.includes('visit') || lower.includes('phone')) {
-        reply = `Our office is located right at Muthanallur Cross, Sarjapur Road. You can reach our senior property consultant directly at **+91 98450 12345**.`;
+        reply = `Our office is located at No.29 Arasappa Layout, Muthanallur Cross. You can reach Ramesh directly at **+91 88849 03668 / 80957 34812**.`;
       }
 
       setMessages(prev => [...prev, { sender: 'ai', text: reply }]);

@@ -511,20 +511,20 @@ export default function PropertyDetailClient({ property }: { property: Property 
 
                 <div className="mt-6 pt-6 border-t border-slate-100 space-y-3">
                   <a
-                    href={`https://wa.me/919845012345?text=Hi%20OM%20Sakthi,%20I%20want%20details%20for%20${encodeURIComponent(property.title)}`}
+                    href={`https://wa.me/918884903668?text=Hi%20Ramesh%20(OM%20Sakthi),%20I%20want%20details%20for%20${encodeURIComponent(property.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2 shadow-sm"
                   >
-                    <span>Instant WhatsApp Inquiry</span>
+                    <span>Instant WhatsApp Inquiry (8884903668)</span>
                   </a>
 
                   <a
-                    href="tel:+919845012345"
+                    href="tel:+918884903668"
                     className="w-full bg-[#0F4C81] hover:bg-[#0A365C] text-white font-bold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-2 shadow-sm"
                   >
                     <Phone className="w-4 h-4 text-[#D4AF37]" />
-                    <span>Call Senior Advisor</span>
+                    <span>Call Ramesh (+91 88849 03668 / 80957 34812)</span>
                   </a>
                 </div>
 
