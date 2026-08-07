@@ -41,16 +41,31 @@ export default function Navbar() {
       <div className="glass-panel border-b border-slate-200/80 shadow-xs">
         <div className="w-full px-6 lg:px-12 py-4 flex justify-between items-center">
           
-          {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0F4C81] to-[#0A365C] flex items-center justify-center text-[#D4AF37] shadow-md group-hover:scale-105 transition duration-300 border border-[#D4AF37]/30">
-              <Building2 className="w-7 h-7 text-[#D4AF37]" />
+          {/* Brand Logo - Premium Architectural Gold Crest Style */}
+          <Link href="/" className="flex items-center gap-3.5 group select-none">
+            {/* Architectural Gold Emblem Icon */}
+            <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-[#0B2545] via-[#134074] to-[#0B2545] flex items-center justify-center shadow-lg group-hover:shadow-amber-500/20 group-hover:scale-105 transition duration-300 border border-[#D4AF37]/50 overflow-hidden">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-400/20 via-transparent to-transparent" />
+              <Building2 className="w-7 h-7 text-[#EEB902] drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" />
+              <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-amber-300 via-amber-500 to-amber-300" />
             </div>
-            <div>
-              <div className="font-extrabold text-2xl text-[#0F4C81] tracking-tight flex items-center gap-2">
-                OM SAKTHI <span className="text-[#0F172A] font-bold text-xs bg-[#D4AF37] px-2.5 py-0.5 rounded shadow-xs">REAL ESTATE</span>
+
+            {/* Typography & Metallic Gold Badge */}
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2">
+                <span className="font-black text-2xl tracking-tight text-[#0B2545] font-serif uppercase drop-shadow-xs">
+                  OM SAKTHI
+                </span>
+                <span className="bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C59B27] text-[#0F172A] font-black text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-md shadow-xs border border-amber-600/30">
+                  REAL ESTATE
+                </span>
               </div>
-              <p className="text-[11px] text-slate-500 font-bold tracking-wide uppercase">YOUR TRUSTED PROPERTY PARTNER • SARJAPUR</p>
+              <div className="flex items-center gap-2 mt-0.5">
+                <span className="text-[10px] font-extrabold tracking-widest text-slate-500 uppercase">
+                  TRUSTED PROPERTY PARTNER • MUTHANALLUR CROSS
+                </span>
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" title="RERA Active" />
+              </div>
             </div>
           </Link>
 
