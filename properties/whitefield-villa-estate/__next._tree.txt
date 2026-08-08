@@ -1,5 +1,4 @@
-:HL["/_next/static/chunks/28kao7wip7g_c.css","style"]
+:HL["/_next/static/chunks/0vp4dv1m9wm00.css","style"]
 :HL["/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"properties","param":null,"prefetchHints":4192,"slots":{"children":{"name":"id","param":{"type":"d","key":"whitefield-villa-estate","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"2_DRnju2syA1VLD5nvxUi"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"properties","param":null,"prefetchHints":4192,"slots":{"children":{"name":"id","param":{"type":"d","key":"whitefield-villa-estate","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"M2ylSOsxBxcizFd61tD54"}
